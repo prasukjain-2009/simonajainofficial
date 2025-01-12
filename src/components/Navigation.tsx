@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
+import logo from "../assets/logo.jpeg";
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,7 +53,9 @@ const Navigation: React.FC = () => {
     <nav className={`navigation ${isScrolled ? "scrolled" : ""}`}>
       <div className="nav-container">
         <div className="nav-brand">
-          <Link to="/">Simona Jain</Link>
+          <Link to="/">
+            <img src={logo} alt="Logo" className="nav-logo " />
+          </Link>
         </div>
 
         <div className="desktop-menu">

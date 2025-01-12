@@ -13,7 +13,12 @@ const App: React.FC = () => {
         theme={{
           token: {
             colorPrimary: "#000000",
-            colorSecondary: "#d4af37",
+            colorBgBase: "#ffffff",
+            colorTextBase: "#000000",
+            colorTextSecondary: "#d4af37",
+            borderRadius: 4,
+            colorBorder: "#d9d9d9",
+            colorBgContainer: "#ffffff",
           },
         }}
       >

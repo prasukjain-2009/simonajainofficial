@@ -1,13 +1,14 @@
 import React from "react";
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../config/constants";
 import SEO from "../components/SEO";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    navigate("/contact");
+    navigate(`${BASE_URL}/contact`);
   };
 
   return (

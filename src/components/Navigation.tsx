@@ -4,6 +4,7 @@ import { Menu, Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import logo from "../assets/logo.jpeg";
+import { BASE_URL } from "../config/constants";
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,42 +19,40 @@ const Navigation: React.FC = () => {
 
   const menuItems: MenuProps["items"] = [
     {
-      key: "/",
-      label: <Link to="/">Home</Link>,
+      key: `${BASE_URL}/`,
+      label: <Link to={`${BASE_URL}/`}>Home</Link>,
     },
     {
       key: "portfolio",
       label: "Portfolio",
       children: [
         {
-          key: "/portfolio/guest",
-          label: <Link to="/portfolio/guest">Guest Makeup</Link>,
+          key: `${BASE_URL}/portfolio/bridal`,
+          label: <Link to={`${BASE_URL}/portfolio/bridal`}>Bridal</Link>,
         },
         {
-          key: "/portfolio/beauty",
-          label: <Link to="/portfolio/beauty">Beauty</Link>,
+          key: `${BASE_URL}/portfolio/fashion`,
+          label: <Link to={`${BASE_URL}/portfolio/fashion`}>Fashion</Link>,
         },
         {
-          key: "/portfolio/fashion",
-          label: <Link to="/portfolio/fashion">Fashion</Link>,
-        },
-        // {
-        //   key: "/portfolio/commercial",
-        //   label: <Link to="/portfolio/commercial">Commercial</Link>,
-        // },
-        {
-          key: "/portfolio/styling",
-          label: <Link to="/portfolio/styling">Styling Concepts</Link>,
+          key: `${BASE_URL}/portfolio/commercial`,
+          label: (
+            <Link to={`${BASE_URL}/portfolio/commercial`}>Commercial</Link>
+          ),
         },
         {
-          key: "portfolio/management",
-          label: <Link to="portfolio/management">Model Management</Link>,
+          key: `${BASE_URL}/portfolio/personal-styling`,
+          label: (
+            <Link to={`${BASE_URL}/portfolio/personal-styling`}>
+              Personal Styling
+            </Link>
+          ),
         },
       ],
     },
     {
       key: "contact",
-      label: <Link to="/contact">Contact</Link>,
+      label: <Link to={`${BASE_URL}/contact`}>Contact Us</Link>,
     },
   ];
 
@@ -61,7 +60,7 @@ const Navigation: React.FC = () => {
     <nav className={`navigation ${isScrolled ? "scrolled" : ""}`}>
       <div className="nav-container">
         <div className="nav-brand">
-          <Link to="/">
+          <Link to={`${BASE_URL}/`}>
             <img src={logo} alt="Logo" className="nav-logo " />
           </Link>
         </div>

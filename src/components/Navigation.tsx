@@ -52,7 +52,7 @@ const Navigation: React.FC = () => {
     },
     {
       key: "contact",
-      label: <Link to={`${BASE_URL}/contact`}>Contact Us</Link>,
+      label: <Link to={`${BASE_URL}/contact`}>Contact</Link>,
     },
   ];
 

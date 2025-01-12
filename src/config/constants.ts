@@ -1,1 +1,1 @@
-export const BASE_URL = "/simonajainofficial";
+export const BASE_URL = "";

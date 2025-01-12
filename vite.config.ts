@@ -4,22 +4,20 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "./",
+  base: "/",
   plugins: [react()],
   build: {
     outDir: "docs",
     emptyOutDir: true,
+    assetsDir: "assets",
     rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+      },
       output: {
-        assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name.split(".").at(1);
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-            extType = "img";
-          }
-          return `assets/${extType}/[name]-[hash][extname]`;
-        },
-        chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: `assets/[name].js`,
+        chunkFileNames: `assets/[name].js`,
+        assetFileNames: `assets/[name].[ext]`,
       },
     },
   },
@@ -34,7 +32,6 @@ export default defineConfig({
         javascriptEnabled: true,
         modifyVars: {
           "@primary-color": "#000000",
-          "@secondary-color": "#fefcf5",
           "@link-color": "#000000",
           "@success-color": "#52c41a",
           "@warning-color": "#faad14",

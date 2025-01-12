@@ -1,10 +1,9 @@
 import React from "react";
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { ConfigProvider } from "antd";
 import { HelmetProvider } from "react-helmet-async";
 import Navigation from "./components/Navigation";
 import AppRoutes from "./routes";
-import { BASE_URL } from "./config/constants";
 import "./styles/main.less";
 
 const App: React.FC = () => {
@@ -23,7 +22,7 @@ const App: React.FC = () => {
           },
         }}
       >
-        <Router basename={BASE_URL}>
+        <Router>
           <div className="app">
             <Navigation />
             <main>

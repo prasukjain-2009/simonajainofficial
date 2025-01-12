@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/simonajainofficial/",
+  base: "./",
   plugins: [react()],
   build: {
     outDir: "docs",
@@ -54,5 +54,8 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+    headers: {
+      "Content-Type": "application/javascript",
+    },
   },
 });

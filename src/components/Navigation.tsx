@@ -26,20 +26,28 @@ const Navigation: React.FC = () => {
       label: "Portfolio",
       children: [
         {
-          key: "/portfolio/bridal",
-          label: <Link to="/portfolio/bridal">Bridal</Link>,
+          key: "/portfolio/guest",
+          label: <Link to="/portfolio/guest">Guest Makeup</Link>,
+        },
+        {
+          key: "/portfolio/beauty",
+          label: <Link to="/portfolio/beauty">Beauty</Link>,
         },
         {
           key: "/portfolio/fashion",
           label: <Link to="/portfolio/fashion">Fashion</Link>,
         },
+        // {
+        //   key: "/portfolio/commercial",
+        //   label: <Link to="/portfolio/commercial">Commercial</Link>,
+        // },
         {
-          key: "/portfolio/commercial",
-          label: <Link to="/portfolio/commercial">Commercial</Link>,
+          key: "/portfolio/styling",
+          label: <Link to="/portfolio/styling">Styling Concepts</Link>,
         },
         {
-          key: "/portfolio/personal-styling",
-          label: <Link to="/portfolio/personal-styling">Personal Styling</Link>,
+          key: "portfolio/management",
+          label: <Link to="portfolio/management">Model Management</Link>,
         },
       ],
     },

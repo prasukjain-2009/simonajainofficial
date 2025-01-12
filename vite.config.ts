@@ -9,6 +9,19 @@ export default defineConfig({
   build: {
     outDir: "docs",
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          let extType = assetInfo.name.split(".").at(1);
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+            extType = "img";
+          }
+          return `assets/${extType}/[name]-[hash][extname]`;
+        },
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
+      },
+    },
   },
   resolve: {
     alias: {
@@ -29,7 +42,7 @@ export default defineConfig({
           "@font-size-base": "14px",
           "@heading-color": "rgba(0, 0, 0, 0.85)",
           "@text-color": "rgba(0, 0, 0, 0.65)",
-          "@text-color-secondary": "#fefcf580",
+          "@text-color-secondary": "rgba(0, 0, 0, 0.45)",
           "@disabled-color": "rgba(0, 0, 0, 0.25)",
           "@border-radius-base": "4px",
           "@border-color-base": "#d9d9d9",

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import { ConfigProvider } from "antd";
 import { HelmetProvider } from "react-helmet-async";
 import Navigation from "./components/Navigation";

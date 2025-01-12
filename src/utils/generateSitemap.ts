@@ -6,10 +6,12 @@ const domain = "https://yourwebsite.com";
 const pages = [
   "",
   "/portfolio",
-  "/portfolio/bridal",
-  "/portfolio/fashion",
-  "/portfolio/commercial",
-  "/portfolio/personal-styling",
+  "/portfolio/beauty",
+  "/portfolio/creative",
+  //   "/portfolio/bridal",
+  //   "/portfolio/fashion",
+  //   "/portfolio/commercial",
+  //   "/portfolio/personal-styling",
   "/contact",
 ];
 

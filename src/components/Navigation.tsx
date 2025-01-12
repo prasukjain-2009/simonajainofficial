@@ -27,27 +27,35 @@ const Navigation: React.FC = () => {
       label: "Portfolio",
       children: [
         {
-          key: `${BASE_URL}/portfolio/bridal`,
-          label: <Link to={`${BASE_URL}/portfolio/bridal`}>Bridal</Link>,
+          key: `${BASE_URL}/portfolio/beauty`,
+          label: <Link to={`${BASE_URL}/portfolio/beauty`}>Beauty</Link>,
         },
         {
-          key: `${BASE_URL}/portfolio/fashion`,
-          label: <Link to={`${BASE_URL}/portfolio/fashion`}>Fashion</Link>,
+          key: `${BASE_URL}/portfolio/creative`,
+          label: <Link to={`${BASE_URL}/portfolio/creative`}>Creative</Link>,
         },
-        {
-          key: `${BASE_URL}/portfolio/commercial`,
-          label: (
-            <Link to={`${BASE_URL}/portfolio/commercial`}>Commercial</Link>
-          ),
-        },
-        {
-          key: `${BASE_URL}/portfolio/personal-styling`,
-          label: (
-            <Link to={`${BASE_URL}/portfolio/personal-styling`}>
-              Personal Styling
-            </Link>
-          ),
-        },
+        // {
+        //   key: `${BASE_URL}/portfolio/bridal`,
+        //   label: <Link to={`${BASE_URL}/portfolio/bridal`}>Bridal</Link>,
+        // },
+        // {
+        //   key: `${BASE_URL}/portfolio/fashion`,
+        //   label: <Link to={`${BASE_URL}/portfolio/fashion`}>Fashion</Link>,
+        // },
+        // {
+        //   key: `${BASE_URL}/portfolio/commercial`,
+        //   label: (
+        //     <Link to={`${BASE_URL}/portfolio/commercial`}>Commercial</Link>
+        //   ),
+        // },
+        // {
+        //   key: `${BASE_URL}/portfolio/personal-styling`,
+        //   label: (
+        //     <Link to={`${BASE_URL}/portfolio/personal-styling`}>
+        //       Personal Styling
+        //     </Link>
+        //   ),
+        // },
       ],
     },
     {

@@ -4,6 +4,7 @@ import { ConfigProvider } from "antd";
 import { HelmetProvider } from "react-helmet-async";
 import Navigation from "./components/Navigation";
 import AppRoutes from "./routes";
+import { BASE_URL } from "./config/constants";
 import "./styles/main.less";
 
 const App: React.FC = () => {
@@ -22,7 +23,7 @@ const App: React.FC = () => {
           },
         }}
       >
-        <Router>
+        <Router basename={BASE_URL}>
           <div className="app">
             <Navigation />
             <main>

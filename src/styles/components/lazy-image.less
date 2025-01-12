@@ -1,0 +1,52 @@
+.lazy-image-container {
+  position: relative;
+  overflow: hidden;
+  background-color: fade(@primary-color, 5%);
+
+  &.loading {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        fade(@primary-color, 10%) 50%,
+        transparent 100%
+      );
+      animation: shimmer 1.5s infinite;
+    }
+  }
+
+  .lazy-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    .transition(opacity 0.3s ease);
+
+    &.loaded {
+      opacity: 1;
+    }
+  }
+
+  .loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .loading-spinner();
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

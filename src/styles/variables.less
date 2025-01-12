@@ -1,0 +1,159 @@
+// Colors
+@primary-color: #000000;
+@secondary-color: #fefcf5;
+@accent-color: #d4af37; // Gold accent
+@text-color: #333333;
+@text-color-secondary: #666666;
+@text-color-light: #999999;
+@link-color: @primary-color;
+@border-color: #e8e8e8;
+@background-color: #fefcf5;
+@background-color-light: #f5f5f5;
+@background-color-dark: #141414;
+
+// Status Colors
+@success-color: #52c41a;
+@warning-color: #faad14;
+@error-color: #f5222d;
+@info-color: #1890ff;
+
+// Typography
+@font-primary: "Helvetica Neue", Arial, sans-serif;
+@font-family-secondary: Georgia, serif;
+@font-size-base: 14px;
+@font-size-small: 12px;
+@font-size-large: 16px;
+@font-size-h1: 48px;
+@font-size-h2: 36px;
+@font-size-h3: 24px;
+@font-size-h4: 20px;
+@font-size-h5: 16px;
+@font-size-h6: 14px;
+@line-height-base: 1.5;
+@line-height-heading: 1.2;
+
+// Spacing
+@spacing-unit: 8px;
+@spacing-xs: @spacing-unit; // 8px
+@spacing-sm: @spacing-unit * 2; // 16px
+@spacing-md: @spacing-unit * 3; // 24px
+@spacing-lg: @spacing-unit * 4; // 32px
+@spacing-xl: @spacing-unit * 6; // 48px
+@spacing-xxl: @spacing-unit * 8; // 64px
+
+// Layout
+@container-max-width: 1200px;
+@container-padding: @spacing-lg;
+@nav-height: 80px;
+@nav-height-mobile: 60px;
+@nav-height-scrolled: 60px;
+@footer-height: 60px;
+
+// Breakpoints
+@screen-xs: 480px;
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;
+@screen-xl: 1600px;
+
+// Grid
+@grid-columns: 12;
+@grid-gutter: @spacing-lg;
+
+// Border Radius
+@border-radius-base: 4px;
+@border-radius-md: @border-radius-base;
+@border-radius-sm: 2px;
+@border-radius-lg: 8px;
+@border-radius-xl: 16px;
+@border-radius-circle: 50%;
+
+// Shadows
+@shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+@shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+@shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+@shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+@shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+
+// Z-index
+@z-index-dropdown: 1000;
+@z-index-sticky: 1020;
+@z-index-fixed: 1030;
+@z-index-modal-backdrop: 1040;
+@z-index-modal: 1050;
+@z-index-popover: 1060;
+@z-index-tooltip: 1070;
+
+// Transitions
+@transition-duration: 0.3s;
+@transition-timing: ease;
+@transition-base: all @transition-duration @transition-timing;
+
+// Forms
+@input-height: 40px;
+@input-padding-x: @spacing-md;
+@input-padding-y: @spacing-sm;
+@input-border-width: 1px;
+@input-border-color: @border-color;
+@input-border-radius: @border-radius-base;
+@input-focus-border-color: @accent-color;
+@input-focus-box-shadow: 0 0 0 2px fade(@accent-color, 20%);
+@input-placeholder-color: @text-color-light;
+@input-disabled-bg: @background-color-light;
+
+// Buttons
+@btn-padding-x: @spacing-lg;
+@btn-padding-y: @spacing-sm;
+@btn-font-weight: 500;
+@btn-border-radius: @border-radius-base;
+@btn-transition: @transition-base;
+@btn-disabled-opacity: 0.65;
+
+// Cards
+@card-padding: @spacing-lg;
+@card-border-radius: @border-radius-lg;
+@card-border-color: @border-color;
+@card-shadow: @shadow-md;
+@card-hover-shadow: @shadow-lg;
+
+// Images
+@image-border-radius: @border-radius-base;
+@image-hover-scale: 1.05;
+@image-transition: transform 0.3s ease;
+
+// Animation
+@animation-duration-slow: 0.5s;
+@animation-duration-base: 0.3s;
+@animation-duration-fast: 0.2s;
+
+// Opacity
+@opacity-disabled: 0.65;
+@opacity-hover: 0.8;
+@opacity-active: 1;
+
+// Gradients
+@gradient-primary: linear-gradient(
+  45deg,
+  @primary-color,
+  darken(@primary-color, 10%)
+);
+@gradient-accent: linear-gradient(
+  45deg,
+  @accent-color,
+  darken(@accent-color, 10%)
+);
+@gradient-overlay: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+
+// Aspect Ratios
+@aspect-ratio-square: 100%;
+@aspect-ratio-portrait: 75%;
+@aspect-ratio-landscape: 56.25%;
+@aspect-ratio-wide: 41.66%;
+
+// Misc
+@backdrop-filter-blur: blur(10px);
+@overlay-background: rgba(0, 0, 0, 0.5);
+@divider-color: @border-color;
+@scrollbar-width: 6px;
+@scrollbar-thumb-color: @text-color-light;
+@scrollbar-track-color: @background-color-light;

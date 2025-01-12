@@ -1,0 +1,115 @@
+.home {
+  // Hero section
+  .hero {
+    height: 100vh;
+    position: relative;
+    .flex-center();
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/images/hero-bg.jpg") no-repeat center center;
+    background-size: cover;
+
+    &-content {
+      text-align: center;
+      color: @secondary-color;
+      .slide-up();
+
+      h1 {
+        .heading-1();
+        margin-bottom: @spacing-md;
+      }
+
+      p {
+        font-size: @font-size-large;
+        margin-bottom: @spacing-xl;
+      }
+
+      .cta-button {
+        .button-primary();
+      }
+    }
+  }
+
+  // Featured Work section
+  .featured-work {
+    padding: @spacing-xxl 0;
+
+    h2 {
+      .heading-2();
+      text-align: center;
+      margin-bottom: @spacing-xl;
+    }
+
+    .featured-grid {
+      .image-grid(300px);
+      padding: 0 @spacing-xl;
+
+      .featured-item {
+        position: relative;
+        overflow: hidden;
+        .aspect-ratio(75%);
+        .card-shadow();
+
+        img {
+          .image-cover();
+          .transition();
+        }
+
+        .featured-overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: @spacing-md;
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+          color: @secondary-color;
+          .fade-in();
+
+          h3 {
+            font-size: @font-size-large;
+            margin-bottom: @spacing-xs;
+          }
+
+          p {
+            font-size: @font-size-small;
+            opacity: 0.8;
+          }
+        }
+
+        &:hover img {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  // About Preview section
+  .about-preview {
+    padding: @spacing-xxl @spacing-xl;
+    background-color: @primary-color;
+    color: @secondary-color;
+
+    .about-content {
+      max-width: @container-max-width;
+      margin: 0 auto;
+      text-align: center;
+
+      h2 {
+        .heading-2();
+        margin-bottom: @spacing-lg;
+      }
+
+      p {
+        font-size: @font-size-large;
+        line-height: 1.6;
+        margin-bottom: @spacing-xl;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .about-cta {
+        .button-secondary();
+      }
+    }
+  }
+}

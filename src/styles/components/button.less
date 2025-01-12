@@ -1,0 +1,62 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: @border-radius-sm;
+  font-weight: 500;
+  cursor: pointer;
+  .transition();
+
+  // Variants
+  &.primary {
+    background-color: @primary-color;
+    color: @secondary-color;
+
+    &:hover:not(:disabled) {
+      background-color: lighten(@primary-color, 10%);
+    }
+  }
+
+  &.secondary {
+    background-color: @accent-color;
+    color: @secondary-color;
+
+    &:hover:not(:disabled) {
+      background-color: darken(@accent-color, 10%);
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: 2px solid @primary-color;
+    color: @primary-color;
+
+    &:hover:not(:disabled) {
+      background-color: @primary-color;
+      color: @secondary-color;
+    }
+  }
+
+  // Sizes
+  &.small {
+    padding: @spacing-xs @spacing-sm;
+    font-size: @font-size-small;
+  }
+
+  &.medium {
+    padding: @spacing-sm @spacing-md;
+    font-size: @font-size-base;
+  }
+
+  &.large {
+    padding: @spacing-md @spacing-lg;
+    font-size: @font-size-large;
+  }
+
+  // Disabled state
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

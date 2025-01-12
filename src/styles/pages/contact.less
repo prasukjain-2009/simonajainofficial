@@ -1,0 +1,87 @@
+.contact {
+  padding-top: @nav-height;
+  min-height: calc(100vh - @nav-height);
+
+  .contact-header {
+    text-align: center;
+    padding: @spacing-xxl @spacing-xl;
+    background-color: @primary-color;
+    color: @secondary-color;
+
+    h1 {
+      .heading-1();
+      margin-bottom: @spacing-md;
+    }
+
+    .ant-typography {
+      font-size: @font-size-large;
+      opacity: 0.8;
+    }
+  }
+
+  .contact-container {
+    max-width: @container-max-width;
+    margin: 0 auto;
+    padding: @spacing-xxl @spacing-xl;
+
+    .contact-card {
+      .card-shadow();
+      border-radius: @border-radius-lg;
+
+      .contact-info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: @spacing-lg;
+
+        .icon {
+          font-size: 24px;
+          color: @accent-color;
+          margin-right: @spacing-md;
+          margin-top: 4px;
+        }
+
+        .info-content {
+          flex: 1;
+
+          h4.ant-typography {
+            margin-bottom: @spacing-sm;
+            color: @text-color;
+          }
+
+          .ant-typography {
+            margin-bottom: 0;
+          }
+
+          a {
+            color: @text-color;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: @accent-color;
+            }
+          }
+
+          .instagram-button {
+            margin-top: @spacing-xs;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: @screen-md) {
+  .contact {
+    .contact-container {
+      padding: @spacing-lg;
+
+      .contact-card {
+        .contact-info-item {
+          margin-bottom: @spacing-md;
+        }
+      }
+    }
+  }
+}

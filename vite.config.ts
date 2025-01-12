@@ -10,14 +10,28 @@ export default defineConfig({
     outDir: "docs",
     emptyOutDir: true,
     assetsDir: "assets",
+    cssCodeSplit: false,
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, "index.html"),
       },
       output: {
-        entryFileNames: `assets/[name].js`,
-        chunkFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`,
+        entryFileNames: `assets/[name].[hash].js`,
+        chunkFileNames: `assets/[name].[hash].js`,
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split(".");
+          const extType = info[info.length - 1];
+          if (/\.(css|less)$/.test(assetInfo.name)) {
+            return `assets/css/[name].[hash][extname]`;
+          }
+          if (/\.(png|jpe?g|gif|svg|ico|webp)$/.test(assetInfo.name)) {
+            return `assets/images/[name].[hash][extname]`;
+          }
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name)) {
+            return `assets/fonts/[name].[hash][extname]`;
+          }
+          return `assets/[name].[hash][extname]`;
+        },
       },
     },
   },
@@ -30,6 +44,7 @@ export default defineConfig({
     preprocessorOptions: {
       less: {
         javascriptEnabled: true,
+        additionalData: '@import "@/styles/variables.less";',
         modifyVars: {
           "@primary-color": "#000000",
           "@link-color": "#000000",
@@ -47,6 +62,7 @@ export default defineConfig({
         },
       },
     },
+    devSourcemap: true,
   },
   server: {
     port: 3000,

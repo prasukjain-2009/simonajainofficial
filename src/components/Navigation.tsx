@@ -59,8 +59,12 @@ const Navigation: React.FC = () => {
       ],
     },
     {
-      key: "contact",
+      key: `${BASE_URL}/contact`,
       label: <Link to={`${BASE_URL}/contact`}>Contact</Link>,
+    },
+    {
+      key: `${BASE_URL}/about`,
+      label: <Link to="/about">About</Link>,
     },
   ];
 
@@ -78,6 +82,8 @@ const Navigation: React.FC = () => {
             mode="horizontal"
             selectedKeys={[location.pathname]}
             items={menuItems}
+            theme="light"
+            className="nav-menu"
           />
         </div>
 
@@ -85,11 +91,12 @@ const Navigation: React.FC = () => {
           <Button
             type="text"
             icon={<MenuOutlined />}
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           />
           <Drawer
             title="Menu"
             placement="right"
+            width={200}
             onClose={() => setMobileMenuOpen(false)}
             open={mobileMenuOpen}
           >
@@ -98,6 +105,7 @@ const Navigation: React.FC = () => {
               selectedKeys={[location.pathname]}
               items={menuItems}
               onClick={() => setMobileMenuOpen(false)}
+              className="nav-menu"
             />
           </Drawer>
         </div>

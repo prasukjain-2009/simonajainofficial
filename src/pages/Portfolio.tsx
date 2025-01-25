@@ -95,6 +95,7 @@ const Portfolio: React.FC = () => {
             <Card
               key={image.id}
               hoverable
+              className="image-card"
               cover={
                 <Image
                   alt={image.title}
@@ -105,7 +106,7 @@ const Portfolio: React.FC = () => {
                 />
               }
             >
-              <Card.Meta title={image.title} description={image.category} />
+              <Card.Meta title={image.title} />
             </Card>
           ))}
         </div>

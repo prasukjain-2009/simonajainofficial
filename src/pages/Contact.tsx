@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
   return (
     <div className="contact">
       <div className="contact-header">
-        <Title level={1}>Get in Touch</Title>
+        <Title level={2}>Get in Touch</Title>
         <Paragraph>
           We'd love to hear from you and discuss your makeup and styling needs
         </Paragraph>

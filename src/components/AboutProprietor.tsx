@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/about-proprietor.less";
-import { Row, Col, Tooltip } from "antd";
+import { Row, Col, Tooltip, Image } from "antd";
 
 const AboutProprietor: React.FC = () => {
   const celebrityImages = [
@@ -31,13 +31,12 @@ const AboutProprietor: React.FC = () => {
       <div className="about-content">
         <Row gutter={[32, 32]} align="middle">
           <Col xs={24} md={12}>
-            <div className="proprietor-image">
-              <img
-                src="/images/proprietor.jpg"
-                alt="Simona Jain"
-                className="main-image"
-              />
-            </div>
+            <Image
+              src="/images/proprietor.jpg"
+              alt="Simona Jain"
+              className="main-image"
+              preview={false}
+            />
           </Col>
 
           <Col xs={24} md={12}>
@@ -48,7 +47,10 @@ const AboutProprietor: React.FC = () => {
             </p>
             <p>
               My journey began with a deep-rooted passion for fashion and
-              design...
+              design. I graduated as a Fashion Designer from SNDT University,
+              earning the prestigious "Best Designer of the Batch" award in 2018
+              under the mentorship of celebrated designers Vikram Phadnis and
+              Ken Ferns.
             </p>
           </Col>
         </Row>
@@ -69,13 +71,39 @@ const AboutProprietor: React.FC = () => {
 
         <div className="about-text">
           <p>
-            Starting my career as an Assistant Manager in Fashion and Styling...
+            Starting my career as an Assistant Manager in Fashion and Styling, I
+            soon transitioned into the dynamic role of a Model Manager in Delhi.
+            Over the years, I've had the privilege of contributing backstage to
+            esteemed events like Times Fashion Week and Couture Fashion Week.
+            I've also worked alongside iconic designers such as Tarun Tahiliani,
+            Raghuvendra Rathore, Nevedita Saboo, Kalki, Ritu Beri, Narendra
+            Kumar, Neeta Lulla, and many more. Additionally, I've managed
+            celebrated personalities like Sushmita Sen, Dia Mirza, Kalki
+            Koechlin, Chitrangda Singh, Karisma Kapoor, Sunny Leone, Malaika
+            Arora Khan, Priyank Sharma, Hina Khan, and Srishty Rode, among
+            others.
           </p>
-          <p>Expanding my expertise further...</p>
-          <p>With a vision to channel my fashion and styling expertise...</p>
+          <p>
+            Expanding my expertise further, I ventured into the advertising
+            industry, managing projects for catalogs, e-commerce, website
+            shoots, and brand campaigns. This evolution allowed me to
+            collaborate with industry-leading brands like Samsung, Gillette
+            Razor, Tata Cliq, Demench, Sonata, and Nykaa. These experiences
+            helped refine my skills in project management, time efficiency, and
+            delivering impactful outcomes.
+          </p>
+          <p>
+            With a vision to channel my fashion and styling expertise while
+            fostering new talent, I am proud to introduce *Simonajainofficial*.
+            This platform seamlessly integrates my roles as a Makeup Artist,
+            Stylist, Model Manager, and Designer, offering a comprehensive
+            approach to creative excellence.
+          </p>
           <p>
             At <em>Simonajainofficial</em>, we are committed to transforming
-            ideas into reality...
+            ideas into reality through innovation, professionalism, and
+            unmatched dedication. Let's collaborate and create something
+            extraordinary together.
           </p>
         </div>
       </div>

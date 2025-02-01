@@ -8,6 +8,7 @@ interface ImageInfo {
   title: string;
   url: string;
   category: string;
+  showTitle: boolean;
 }
 
 const Portfolio: React.FC = () => {
@@ -24,27 +25,34 @@ const Portfolio: React.FC = () => {
         const allImagesContext = import.meta.glob(
           "../assets/*/*.{png,jpg,jpeg,gif}"
         );
-        const architectureImagesContext = import.meta.glob(
-          "../assets/architecture/*.{png,jpg,jpeg,gif}"
+        const brandImagesContext = import.meta.glob(
+          "../assets/brand/*.{png,jpg,jpeg,gif}"
         );
-        const natureImagesContext = import.meta.glob(
-          "../assets/nature/*.{png,jpg,jpeg,gif}"
+        const ethnicImagesContext = import.meta.glob(
+          "../assets/ethnic/*.{png,jpg,jpeg,gif}"
         );
-        const urbanImagesContext = import.meta.glob(
-          "../assets/urban/*.{png,jpg,jpeg,gif}"
+        const fashionImagesContext = import.meta.glob(
+          "../assets/fashion/*.{png,jpg,jpeg,gif}"
+        );
+        const beautyImagesContext = import.meta.glob(
+          "../assets/beauty/*.{png,jpg,jpeg,gif}"
         );
 
         // Choose the appropriate context based on category
         let imageContext;
         switch (category) {
-          case "architecture":
-            imageContext = architectureImagesContext;
+          case "brand":
+            imageContext = brandImagesContext;
             break;
-          case "nature":
-            imageContext = natureImagesContext;
+          case "ethnic":
+            console.log(ethnicImagesContext);
+            imageContext = ethnicImagesContext;
             break;
-          case "urban":
-            imageContext = urbanImagesContext;
+          case "fashion":
+            imageContext = fashionImagesContext;
+            break;
+          case "beauty":
+            imageContext = beautyImagesContext;
             break;
           default:
             imageContext = allImagesContext;
@@ -59,9 +67,10 @@ const Portfolio: React.FC = () => {
 
             return {
               id: path,
-              title: fileName.split(".")[0],
+              title: fileName.split("_")[0],
               url: imported.default,
               category: imageCategory,
+              showTitle: ["brand"].includes(imageCategory),
             };
           })
         );
@@ -92,21 +101,14 @@ const Portfolio: React.FC = () => {
       <Spin spinning={loading}>
         <div className="image-grid">
           {images.map((image) => (
-            <Card
-              key={image.id}
-              hoverable
-              className="image-card"
-              cover={
-                <Image
-                  alt={image.title}
-                  src={image.url}
-                  preview={{
-                    mask: image.title,
-                  }}
-                />
-              }
-            >
-              <Card.Meta title={image.title} />
+            <Card key={image.id} hoverable className="image-card">
+              <Image
+                alt={image.title}
+                src={image.url}
+                preview={{
+                  mask: image.showTitle ? image.title : null,
+                }}
+              />
             </Card>
           ))}
         </div>

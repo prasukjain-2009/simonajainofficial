@@ -41,12 +41,20 @@
       margin-bottom: @spacing-md;
       width: 100%;
       display: inline-block;
+      .ant-card-body {
+        padding: 0;
 
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        .transition();
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          .transition();
+        }
+
+        .ant-image-mask {
+          transform: scale(1.05);
+          transition: transform, opacity 0.3s ease-in-out;
+        }
       }
 
       &:hover {

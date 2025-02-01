@@ -34,6 +34,7 @@ export default defineConfig({
         },
       },
     },
+    copyPublicDir: true,
   },
   resolve: {
     alias: {

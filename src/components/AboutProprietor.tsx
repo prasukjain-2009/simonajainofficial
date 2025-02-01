@@ -1,28 +1,34 @@
 import React from "react";
 import "../styles/about-proprietor.less";
-import { Row, Col, Tooltip, Image } from "antd";
+import { Row, Col, Tooltip, Image, Carousel } from "antd";
+import About from "../assets/about/About.jpg";
+import HinaKhan from "../assets/about/Hina Khan.jpg";
+import KalkiKoechlin from "../assets/about/Kalki Koechlin.jpg";
+import PriyankSharma from "../assets/about/Priyank Sharma.jpg";
+import ShrishtyRode from "../assets/about/Shrishty Rode.jpg";
+import SunnyLeone from "../assets/about/Sunny Leone.jpg";
 
 const AboutProprietor: React.FC = () => {
   const celebrityImages = [
     {
-      src: "/images/celeb-1.jpg",
-      alt: "With Sushmita Sen",
-      caption: "Backstage with Sushmita Sen at Times Fashion Week",
+      src: HinaKhan,
+      alt: "With Hina Khan",
     },
     {
-      src: "/images/celeb-2.jpg",
-      alt: "With Dia Mirza",
-      caption: "Styling session with Dia Mirza",
+      src: KalkiKoechlin,
+      alt: "With Kalki Koechlin",
     },
     {
-      src: "/images/celeb-3.jpg",
-      alt: "With Malaika Arora",
-      caption: "Fashion Week with Malaika Arora Khan",
+      src: PriyankSharma,
+      alt: "With Priyank Sharma",
     },
     {
-      src: "/images/celeb-4.jpg",
-      alt: "With Karisma Kapoor",
-      caption: "Behind the scenes with Karisma Kapoor",
+      src: ShrishtyRode,
+      alt: "With Shrishty Rode",
+    },
+    {
+      src: SunnyLeone,
+      alt: "With Sunny Leone",
     },
   ];
 
@@ -32,7 +38,7 @@ const AboutProprietor: React.FC = () => {
         <Row gutter={[32, 32]} align="middle">
           <Col xs={24} md={12}>
             <Image
-              src="/images/proprietor.jpg"
+              src={About}
               alt="Simona Jain"
               className="main-image"
               preview={false}
@@ -56,18 +62,61 @@ const AboutProprietor: React.FC = () => {
         </Row>
 
         <h2 className="gallery-title">Career Highlights</h2>
-        <Row className="image-collage" gutter={[16, 16]}>
-          {celebrityImages.map((image, index) => (
-            <Col xs={12} sm={8} md={6} key={index}>
-              <div className="image-container">
-                <Tooltip title={image.caption}>
+        <div className="carousel-container">
+          <Carousel
+            autoplay
+            autoplaySpeed={1000}
+            infinite
+            arrows
+            prevArrow={<div className="carousel-arrow prev">‹</div>}
+            nextArrow={<div className="carousel-arrow next">›</div>}
+            slidesToShow={4}
+            slidesToScroll={1}
+            responsive={[
+              {
+                breakpoint: 1200, // xl
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 1,
+                  arrows: true,
+                },
+              },
+              {
+                breakpoint: 992, // lg
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  arrows: true,
+                },
+              },
+              {
+                breakpoint: 768, // md
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  arrows: true,
+                },
+              },
+              {
+                breakpoint: 576, // sm
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  arrows: true,
+                },
+              },
+            ]}
+          >
+            {celebrityImages.map((image, index) => (
+              <div key={index} className="carousel-item">
+                <div className="image-container">
                   <img src={image.src} alt={image.alt} />
-                </Tooltip>
-                <div className="image-caption">{image.alt}</div>
+                  <div className="image-caption">{image.alt}</div>
+                </div>
               </div>
-            </Col>
-          ))}
-        </Row>
+            ))}
+          </Carousel>
+        </div>
 
         <div className="about-text">
           <p>

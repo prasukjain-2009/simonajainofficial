@@ -7,7 +7,10 @@ const pages = [
   "",
   "/portfolio",
   "/portfolio/beauty",
-  "/portfolio/creative",
+  "/portfolio/fashion",
+  "/portfolio/brand",
+  "/portfolio/ethnic",
+
   //   "/portfolio/bridal",
   //   "/portfolio/fashion",
   //   "/portfolio/commercial",

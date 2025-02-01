@@ -31,17 +31,21 @@ const Navigation: React.FC = () => {
           label: <Link to={`${BASE_URL}/portfolio/beauty`}>Beauty</Link>,
         },
         {
-          key: `${BASE_URL}/portfolio/creative`,
-          label: <Link to={`${BASE_URL}/portfolio/creative`}>Creative</Link>,
+          key: `${BASE_URL}/portfolio/brand`,
+          label: <Link to={`${BASE_URL}/portfolio/brand`}>Brand Shoots</Link>,
         },
-        // {
-        //   key: `${BASE_URL}/portfolio/bridal`,
-        //   label: <Link to={`${BASE_URL}/portfolio/bridal`}>Bridal</Link>,
-        // },
-        // {
-        //   key: `${BASE_URL}/portfolio/fashion`,
-        //   label: <Link to={`${BASE_URL}/portfolio/fashion`}>Fashion</Link>,
-        // },
+        {
+          key: `${BASE_URL}/portfolio/ethnic`,
+          label: <Link to={`${BASE_URL}/portfolio/ethnic`}>Ethnic</Link>,
+        },
+        {
+          key: `${BASE_URL}/portfolio/fashion`,
+          label: (
+            <Link to={`${BASE_URL}/portfolio/fashion`}>
+              Fashion - E-Commerce
+            </Link>
+          ),
+        },
         // {
         //   key: `${BASE_URL}/portfolio/commercial`,
         //   label: (

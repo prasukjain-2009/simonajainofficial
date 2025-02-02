@@ -88,11 +88,11 @@ const Contact: React.FC = () => {
                     <div className="info-content">
                       <Title level={4}>Services</Title>
                       <Paragraph>
-                        • Bridal Makeup & Styling
+                        • Wedding and Engagement
                         <br />
-                        • Fashion Makeup
+                        • Fashion and Ecommerce
                         <br />
-                        • Commercial Styling
+                        • Parties and Celebritions
                         <br />
                         • Personal Style Consulting
                         <br />• Model Management

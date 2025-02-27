@@ -66,10 +66,10 @@ const Navigation: React.FC = () => {
       key: `${BASE_URL}/contact`,
       label: <Link to={`${BASE_URL}/contact`}>Contact</Link>,
     },
-    // {
-    //   key: `${BASE_URL}/about`,
-    //   label: <Link to="/about">About</Link>,
-    // },
+    {
+      key: `${BASE_URL}/about`,
+      label: <Link to="/about">About</Link>,
+    },
   ];
 
   return (

@@ -9,8 +9,8 @@ import AboutProprietor from "@/components/AboutProprietor";
 const AppRoutes: React.FC = () => {
   return (
     <Routes>
-      {/* <Route path="/" element={<Home />} /> */}
-      <Route path="/" element={<AboutProprietor />} />
+      <Route path="/" element={<Home />} />
+      {/* <Route path="/" element={<AboutProprietor />} /> */}
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/portfolio/:category" element={<Portfolio />} />
       <Route path="/contact" element={<Contact />} />

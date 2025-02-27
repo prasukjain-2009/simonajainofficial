@@ -3,6 +3,7 @@ import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../config/constants";
 import SEO from "../components/SEO";
+import introVideo from "../assets/introVideo.mp4";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -20,7 +21,10 @@ const Home: React.FC = () => {
       />
       <div className="home">
         <section className="hero">
-          <div className="hero-content">
+          <video className="hero-video" autoPlay muted loop playsInline>
+            <source src={introVideo} type="video/mp4" />
+          </video>
+          {/* <div className="hero-content">
             <h1>Transforming Visions into Reality</h1>
             <p>Professional Makeup Artistry & Styling Services</p>
             <Button
@@ -31,13 +35,31 @@ const Home: React.FC = () => {
             >
               Contact Us
             </Button>
-          </div>
+          </div> */}
         </section>
 
         {/* ... rest of the home page content ... */}
 
         <section className="about-preview">
-          <div className="about-content">
+        <div className="about-content">
+            <h2>Transforming Visions into Reality</h2>
+            <h3>
+            Professional Makeup Artistry & Styling Services
+            </h3>
+            <p>
+            Ready to transform your style? Get in touch to discuss your makeup
+              and styling needs.
+            </p>
+            <Button
+              type="default"
+              size="large"
+              onClick={handleContactClick}
+              className="about-cta"
+            >
+              Contact Us
+            </Button>
+          </div>
+          {/* <div className="about-content">
             <h2>Let's Create Your Perfect Look</h2>
             <p>
               Ready to transform your style? Get in touch to discuss your makeup
@@ -51,7 +73,7 @@ const Home: React.FC = () => {
             >
               Contact Us
             </Button>
-          </div>
+          </div> */}
         </section>
       </div>
     </>
